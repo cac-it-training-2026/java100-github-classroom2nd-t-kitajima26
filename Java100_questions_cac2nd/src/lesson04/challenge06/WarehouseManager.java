@@ -74,21 +74,25 @@ public class WarehouseManager {
 		System.out.println("\nです。\n");
 
 		//ここに値の入れ替え処理を記述する
+		boolean oneFlag = false;
+		boolean twoFlag = false;
 		for (int i = 0; i < ABKosanArray.length; i++) {
-			if (ABKosanArray[i] == 1) {
+			if (ABKosanArray[i] == 1 && !oneFlag) {
 				for (int j = 0; j < ABKosanArray.length; j++) {
 					if (ABKosanArray[j] == 3) {
 						ABKosanArray[i] = 3;
 						ABKosanArray[j] = 1;
+						oneFlag = true;
 						break;
 					}
 				}
 			}
-			if (ABKosanArray[i] == 2) {
+			if (ABKosanArray[i] == 2 && !twoFlag) {
 				for (int j = 0; j < ABKosanArray.length; j++) {
 					if (ABKosanArray[j] == 4) {
 						ABKosanArray[i] = 4;
 						ABKosanArray[j] = 2;
+						twoFlag = true;
 						break;
 					}
 				}
