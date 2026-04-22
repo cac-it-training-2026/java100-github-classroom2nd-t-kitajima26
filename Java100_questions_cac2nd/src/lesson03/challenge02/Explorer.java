@@ -60,10 +60,18 @@ public class Explorer {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int targetCans = 50;
 		int inputCans = 0;
-
+		String str;
+		int num;
 
 		//ここにfor文を利用した処理を記述
-
+		for (int i = 0; i < 3; i++) {
+			System.out.println("隊長：");
+			System.out.print(("あと" + (3 - i) + "回！"));
+			System.out.println("袋に何個入れますか？＞");
+			str = br.readLine();
+			num = Integer.parseInt(str);
+			inputCans += num;
+		}
 
 		if (inputCans >= targetCans) {
 			System.out.println("\n隊長：");
